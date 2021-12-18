@@ -1,10 +1,32 @@
-import React from "react";
+import React, {useState} from "react";
+import { useParams } from "react-router";
 
-export default class Lyric extends React.Component {
-    render(){
-        console.log(this.props);
+export default function Lyric() {
+    
+    let { musicName, artist } = useParams();
+    const [lyric, setLyric] = useState('');
+  
+        let myMusicName = musicName
+        let myArtist = artist;
+        
+        fetch(`https://api.lyrics.ovh/v1/${myArtist}/${myMusicName}`)
+        .then(res => res.json())
+        .then(
+            (result) => {
+                result.lyrics ? 
+            setLyric(result.lyrics) :
+            setLyric(result.error);
+        },
+            (error) => {
+                let notFound = error.error;
+                setLyric(notFound);
+            }
+        );
         return (
-            <div>mmmmm</div>
+            <div className = "container mt-5">
+                <h3>{musicName}</h3>
+                <h2>{artist}</h2>
+                <div className = 'lyric-text'>{lyric}</div>
+            </div>
         )
-    }
 }

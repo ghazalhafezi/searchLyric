@@ -15,7 +15,7 @@ export default function Music(props){
                     <p className="card-text">{item.title_short}</p>
                     <Link to = {`/Lyric/${item.title_short}/${item.artist.name}`} className="btn btn-info">Go To Lyric</Link>
                 </div>
-            
+            <Outlet />
         </Card>
     ))
 

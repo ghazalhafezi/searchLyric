@@ -14,7 +14,6 @@ function Search(){
         .then(res => res.json())
         .then(
             (result) => {
-            console.log(result);
             setList(result.data);
             setSearchResult(true);
         },

@@ -14,10 +14,7 @@ function App() {
 <Routes>
   <Route path="/" element={<App />} />
   <Route index element={<Search />} />
-  <Route path="Lyric" element={<Lyric />} />
-  <Route path="Lyric/:musicName/:artist" render={(props) => {
-    <Lyric {...props} />
-  }} />
+  <Route path="Lyric/:musicName/:artist"  element={<Lyric />}/>
     
   
 </Routes>
