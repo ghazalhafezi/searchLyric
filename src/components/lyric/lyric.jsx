@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useParams } from "react-router";
+import "../lyric/lyric.css";
 
 export default function Lyric() {
     
@@ -24,8 +25,8 @@ export default function Lyric() {
         );
         return (
             <div className = "container mt-5">
-                <h3>{musicName}</h3>
-                <h2>{artist}</h2>
+                <h3 className = 'title'>{musicName}</h3>
+                <h2 className = 'artist'>{artist}</h2>
                 <div className = 'lyric-text'>{lyric}</div>
             </div>
         )

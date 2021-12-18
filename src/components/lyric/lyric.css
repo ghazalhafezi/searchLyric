@@ -1,3 +1,14 @@
 .lyric-text {
-    margin: 50px;
+    line-height: 30px;
+    font-size: 1rem;
+    padding: 0 40px;
+}
+
+.title {
+    font-size: 1.4rem;
+    margin: 10 px;
+}
+
+.artist {
+    font-size: 1rem;
 }

@@ -1,0 +1,54 @@
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 20%;
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 0px 3px #ccc;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    max-height: 60px;
+}
+
+.card-text {
+    margin-top: 3px;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 40%;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.card img {
+    width: 100%;
+}
+
+.btn-info {
+    background: cadetblue;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0px;
+    display: inline-block;
+}
